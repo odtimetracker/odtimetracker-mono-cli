@@ -59,11 +59,6 @@
 				bool hasTags = (rest.IndexOf(';') >= 0);
 				bool hasDescription = (rest.IndexOf('#') >= 0);
 
-				// XXX Remove this!
-				Console.WriteLine("Název projektu: " + (hasProjectName ? "A" : "N"));
-				Console.WriteLine("Přiřazené tagy: " + (hasTags ? "A" : "N"));
-				Console.WriteLine("Popis aktivity: " + (hasDescription ? "A" : "N"));
-
 				// Project name
 				if (hasProjectName == true)
 				{
@@ -121,6 +116,10 @@
 				{
 					projectName = rest;
 				}
+				else if (name.Length == 0)
+				{
+					name = rest;
+				}
 
 				// Check if project with given name exists and if no create it!
 				long projectId = 0;
@@ -143,14 +142,6 @@
 
 					ProjectId = projectId;
 				}
-
-				// XXX Remove this!
-				Console.WriteLine("Název aktivity: " + name);
-				Console.WriteLine("ID projektu:    " + projectId.ToString());
-				Console.WriteLine("Název projektu: " + projectName);
-				Console.WriteLine("Přiřazené tagy: " + tags);
-				Console.WriteLine("Popis aktivity: " + description);
-				Console.WriteLine("");
 
 				ProjectId = projectId;
 				Name = name;

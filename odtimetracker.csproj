@@ -44,7 +44,6 @@
     <Compile Include="Storage\SqliteStorage.cs" />
     <Compile Include="Model\Activity.cs" />
     <Compile Include="Model\Project.cs" />
-    <Compile Include="Model\PaymentTypeEnum.cs" />
     <Compile Include="Model\ActivityTest.cs" />
     <Compile Include="Model\ProjectTest.cs" />
   </ItemGroup>
